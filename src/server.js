@@ -2,14 +2,15 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
-const livroRoutes = require('./livroRoutes');
+// ✅ IMPORTAR ROTAS 
+const livroRoutes = require('./routes/livroRoutes');
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// rotas
+// ✅ usar rotas
 app.use(livroRoutes);
 
 // rota teste
